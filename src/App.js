@@ -4,7 +4,10 @@ import styled from 'styled-components';
 export default function HomePage() {
   return (
     <HomePageStyled>
-      <img src="images/photo-profil.png" alt="" />
+      <div className="banner-top">
+        <img src="images/photo-profil.png" alt="" />
+        <span className="title">Romina Matei</span>
+      </div>
       <h1>Home</h1>
       <p>Home page</p>
     </HomePageStyled>
@@ -13,6 +16,22 @@ export default function HomePage() {
 
 const HomePageStyled = styled.div`
   background-color: red;
+
+  .banner-top {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+
+    border: 1px solid green;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 35px;
+    padding-bottom: 15px;
+  }
 
   img {
     width: 50px;
