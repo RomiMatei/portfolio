@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { projectsData } from './projectsData/projectsData';
 
 import Projects from './Projects';
+import { colors } from '../theme/colors';
 
 export default function HomePage() {
   const [projects, setProjects] = useState(projectsData);
@@ -13,7 +14,7 @@ export default function HomePage() {
         <img className="profile" src="images/photo-profil.png" alt="" />
         <span className="name">Romina Matei</span>
       </div>
-      <h1>Home</h1>
+      <h1>Hello, bienvenues sur mon portfolio !</h1>
       <h2 className="realisations">Mes Réalisations</h2>
       {projects.map((project) => {
         return <Projects {...project} />;
@@ -23,31 +24,31 @@ export default function HomePage() {
 }
 
 const HomePageStyled = styled.div`
-  background-color: #f5f5f7;
+  background-color: ${colors.lightGrey};
+  padding: 20px;
 
   .banner-top {
     display: flex;
     align-items: flex-end;
     padding: 20px;
     justify-content: space-between;
-    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .name {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: 600;
-    color: green;
+    color: ${colors.darkGrey};
     margin-left: 35px;
     padding-bottom: 15px;
-    border: 1px solid yellow;
   }
 
   .profile {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid ${colors.white};
   }
 
   h1 {
@@ -57,7 +58,7 @@ const HomePageStyled = styled.div`
   }
 
   .realisations {
-    color: purple;
+    color: ${colors.mediumGrey};
     font-size: 30px;
   }
 `;

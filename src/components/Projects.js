@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../theme/colors';
 
 export default function Projects({ name, id, imageSource, languages }) {
   return (
@@ -23,16 +24,16 @@ export default function Projects({ name, id, imageSource, languages }) {
 }
 
 const ProjectsStyled = styled.div`
-  background: ligtblue;
+  background: ${colors.lightPurple};
   display: grid;
-  grid-template-row: repeat(3, 1fr);
+
 
   .project-image {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
-    border: 1px solid red;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     object-fit: contain;
     padding: 0 20px 0 20px;
     img {
@@ -41,4 +42,25 @@ const ProjectsStyled = styled.div`
       object-fit: contain;
     }
   }
+
+  .project-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: ${colors.secondary};
+    margin-bottom: 10px;
+  }
+
+  .project-languages {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+      background-color: ${colors.lightGrey};
+      color: #6f737e;
+      padding: 5px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
 `;
