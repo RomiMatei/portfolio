@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../theme/colors';
 
-export default function Projects({ name, id, imageSource, languages }) {
+export default function Projects({ name, id, imageSource, languages, webPage }) {
   return (
     <ProjectsStyled>
       <div className="projects">
@@ -13,9 +13,11 @@ export default function Projects({ name, id, imageSource, languages }) {
             })}
           </div>
         </div>
-        <div className="project" key={id}>
+        <div className="project">
           <div className="project-image">
-            <img src={imageSource} alt="" />
+            <a href={webPage}>
+              <img src={imageSource} alt="" />
+            </a>
           </div>
         </div>
       </div>
@@ -25,7 +27,7 @@ export default function Projects({ name, id, imageSource, languages }) {
 
 const ProjectsStyled = styled.div`
   background: ${colors.lightPurple};
-  display: grid;
+border-radius: 5px 5px 0 0;;
 
 
   .project-image {
@@ -37,11 +39,17 @@ const ProjectsStyled = styled.div`
     object-fit: contain;
     padding: 0 20px 0 20px;
     img {
-      width: 80%;
-      height: 80%;
+      width: 90%;
+      height: 100%;
       object-fit: contain;
+      margin-left: 10px;
     }
   }
+
+.project-info {
+  margin:10px 0 10px 10px;
+  padding-top: 10px;
+}
 
   .project-name {
     font-size: 20px;
@@ -55,7 +63,7 @@ const ProjectsStyled = styled.div`
     flex-wrap: wrap;
     span {
       background-color: ${colors.lightGrey};
-      color: #6f737e;
+      color: ${colors.secondary};
       padding: 5px 10px;
       border-radius: 10px;
       font-size: 12px;
