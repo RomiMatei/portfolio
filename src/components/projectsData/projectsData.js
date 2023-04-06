@@ -25,12 +25,18 @@ export const projectsData = [
   },
   {
     id: 5,
+    name: 'So Pekocko',
+    languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'MongoDB'],
+    imageSource: 'images/piquante.png'
+  },
+  {
+    id: 6,
     name: 'Groupomania',
     languages: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'MySQL'],
     imageSource: 'images/groupomania.png'
   },
   {
-    id: 6,
+    id: 7,
     name: 'creezy-burger',
     languages: ['HTML', 'CSS', 'JavaScript', 'React'],
     imageSource: 'images/crazee-burger.png'
