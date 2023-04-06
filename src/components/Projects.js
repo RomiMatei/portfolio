@@ -12,7 +12,7 @@ export default function Projects({ name, id, imageSource, languages }) {
             <h3 className="project-name">{name}</h3>
             <div className="project-languages">
               {languages.map((language) => {
-                return <span key={language}>{language}</span>;
+                return <span key={id}>{language}</span>;
               })}
             </div>
           </div>
@@ -26,11 +26,20 @@ export default function Projects({ name, id, imageSource, languages }) {
 const ProjectsStyled = styled.div`
   background: ligtblue;
   display: grid;
+  grid-template-row: repeat(3, 1fr);
 
   .project-image {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
     border: 1px solid red;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 0 20px 0 20px;
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
   }
 `;
