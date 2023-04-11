@@ -46,6 +46,6 @@ export const projectsData = [
     name: 'creezy-burger',
     languages: ['HTML', 'CSS', 'JavaScript', 'React'],
     imageSource: 'images/crazee-burger.png',
-    webPage: 'https://crazee-burger-r347ucw2g-romimatei.vercel.app/'
+    webPage: 'https://crazee-burger-romimatei.vercel.app/'
   }
 ];
